@@ -21,6 +21,8 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem 'foundation-rails'
 
+gem 'entypo-rails', '~> 2.2.2'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
 
@@ -36,6 +38,13 @@ gem 'jbuilder', '~> 1.2'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+end
+
+gem "font-awesome-rails"
+
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor','0.0.2'
 end
 
 # Use ActiveModel has_secure_password
