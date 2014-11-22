@@ -1,30 +1,423 @@
-<h1>Listing posts</h1>
-<%= link_to 'New Post', new_post_path, class: 'button' %>
+<div id="main-container">
 
-<table>
-  <thead>
-    <tr>
-      <th>Content</th>
-      <th>User</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<section id="home">
+  <div class="row">
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.content %></td>
-        <td><%= post.user.name %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <div id="home-slider" class="flexslider">
+        <ul class="slides">
+          <li>
+            <div class="six columns animated fadeInUpBig slide-left hide-for-small">
+              <img alt="front" src="images/pad.png" />
+            </div>
+            
+            <div class="six columns animated fadeInRightBig slide-right">
+              <h1 class="text-right">Aprende matemáticas jugando</h1>
+              <div class="hr hide-for-small"></div>
+              <p class="right text-right  hide-for-small">
+                Únete a la nueva forma de aprender  nete a la nueva forma de aprender
+                <br /> Únete a la nueva forma de aprender
+              </p>
+              
+              <a href="#features-scroll" class="scroll"><div class="btn right">¿Cómo Funciona?</div></a>
+            </div>
+          </li>
+          
+          <li>
+            <div class="six columns animated fadeInLeftBig slide-left  hide-for-small">
+              <iframe src="http://player.vimeo.com/video/59584804?portrait=0&amp;color=31b7cc"></iframe>
+            </div>
+            
+            <div class="six columns animated fadeInDownBig slide-right">
+              <h1 class="text-right">Flexslider With Video Embeds? Oh Yes.</h1>
+              <div class="hr  hide-for-small"></div>
+              <p class="right text-right  hide-for-small">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+              </p>
+              
+              <a href="#pricing-scroll" class="scroll"><div class="btn right">Personalización Educativa</div></a>
+            </div>
+          </li>
+          
+        
+        </ul>
+      </div>
+    
+  </div>
+</section>
+
+<a id="features-scroll"></a>
+<section id="feature-list" class="even-section">
+
+  <div class="row inner-section section-preamble text-center animated fadeInDown">
+    <h2>Cómo Funciona</h2>
+    
+   
+  </div>
+  
+  <div class="row centered-text">
+    <div class="medium-4 large-4 columns supporticons">
+      <%= image_tag "browser.png" %>
+      <h4 class="alt-h">Crea una cuenta segura
+
+</h4>
+      <p>
+        ¡La seguridad es primero! Sólo necesitas ingresar la edad y el grado escolar de tu hijo para crear una cuenta.
+      </p>
+    </div>
+    
+    <div class="medium-4 large-4 columns supporticons">
+      <%= image_tag "howitworks-2.png" %>
+      <h4 class="alt-h">Una experiencia de aprendizaje personalizada</h4>
+      <p>
+       Nuestro algoritmo se encarga de crear un programa educativo personalizado en base al nivel y habilidades de tu hijo.
+
+
+      </p>
+    </div>
+    
+    <div class="medium-4 large-4 columns supporticons">
+      <%= image_tag "graph.png" %>
+      <h4 class="alt-h">Reportes a detalle del desempeño de tu hijo</h4>
+      <p>
+       Puedes monitorear tiempo de juego, métricas específicas y el desempeño general en nuestro Parent Dashboard.
+      </p>
+    </div>
+    
+   
+  </div>
+
+
+</section>
+
+<div class="row inner-section section-preamble text-center animated fadeInDown">
+    <h2>Por qué utilizar Galois</h2>
+    
+  </div>
+
+<section id="feature-list" class="even-section">
+  
+  <div class="row centered-text">
+    <div class="medium-4 large-4 columns supporticons">
+      <%= image_tag "gamecontroller.png" %>
+      <h4 class="alt-h">Juegos específicos para el nivel de tu hijo</h4>
+      <p>
+       ¿No estás seguro cuales son los estándares educativos que necesita? Galois crea una experiencia de aprendizaje personalizada que le permitirá a tu hijo ponerse al corriente con lo que deben saber según su edad y grado. 
+      </p>
+    </div>
+    
+    <div class="medium-4 large-4 columns supporticons">
+      <%= image_tag "creditcard.png" %>
+      <h4 class="alt-h">¡Sin anuncios, publicidad engañosa o cargos ocultos!</h4>
+      <p>
+        La honestidad es siempre la mejor política. Nuestros juegos no incluyen publicidad y nunca te cobraremos un centavo de más.
+      </p>
+    </div>
+    
+    <div class="medium-4 large-4 columns supporticons">
+     <%= image_tag "clipboard.png" %>
+      <h4 class="alt-h">Reportes detallados del progreso directo a tu dispositivo</h4>
+      <p>
+       Siempre estarás bien informado. Nuestro Parent Dashboard presenta métricas detallas y reportes de una manera fácil de entender.
+      </p>
+    </div>
+    
+    
+  </div>
+
+  <div class="row inner-section section-preamble text-center animated fadeInDown">
+ 
+    <h2>Para Niños</h2>
+    
+   
+  </div>
+
+<div class="row feature-row inner-section flyIn">
+    <div class="medium-4 large-4 columns supporticons">
+      <%= image_tag "tablet.png" %>
+      <h4 class="alt-h">Emocionantes y retadores juegos educativos</h4>
+      <p>
+       Entregamos aprendizaje efectivo y personalizado a tu hijo.
+      </p>
+    </div>
+    
+    <div class="medium-4 large-4 columns supporticons">
+      <%= image_tag "magnifyingglass.png" %>
+      <h4 class="alt-h">Modelo de aprendizaje orientado a metas y basado en resultados
+
+</h4>
+      <p>
+        Diseñamos nuestros mini-juegos en base a las mejores apps educativas y juegos de entretenimiento exitosos.
+      </p>
+    </div>
+    
+    <div class="medium-4 large-4 columns supporticons">
+      <%= image_tag "star.png" %>
+      <h4 class="alt-h">¡Es súper divertido!</h4>
+      <p>
+       Queremos estimular su imaginación y motivar a tu hijo a triunfar, jugando y compitiendo con sus amigos y niños en todo el mundo.
+      </p>
+    </div>
+    
+    
+  </div>
+
+</section>
+
+<a id="gallery-scroll"></a>
+<section id="features-detail" class="odd-section">
+
+  <div class="row inner-section section-preamble text-center flyIn">
+    <h2>Programa Educativo personalizado para niños </h2>
+    
+    <p>
+      Juegos de Matemáticas que ayudaran a tu hijo mejorar sus habilidades
+    </p>
+    <div class="hr"></div>
+  </div>
+  
+  <div class="row inner-section platform-row">
+  
+    <div class="six columns flyLeft text-center">
+      <div class="flexslider">
+        <ul class="slides">
+          <li>
+            <%= image_tag "mac.png" %>
+          
+          </li>
+          
+          <li>
+            <%= image_tag "mac.png" %>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+    
+    <div class="six columns flyRight text-right">
+      <h2 class="text-right"></h2>
+      <div class="hr"></div>
+      <p class="text-right">
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
+      </p>
+      <div class="green-btn">Jugar Ahora</div>
+      
+    </div>
+    
+  
+  </div>
+  
+  <div class="mid-row">
+    <div class="row inner-section platform-row">
+    
+  
+      <div class="six columns flyLeft text-left">
+        <h2 class="text-left">Tablet</h2>
+        <div class="hr"></div>
+        <p class="text-left">
+          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
+        </p>
+        <div class="green-btn">Jugar Ahora</div>
+        
+      </div>
+      
+      <div class="six columns flyRight text-center">
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+             <%= image_tag "pad.png" %>
+            </li>
+            
+            <li>
+              <%= image_tag "pad.png" %>
+            </li>
+            
+            <li>
+              <%= image_tag "pad.png" %>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+    
+    </div>
+  </div>
+  
+  <div class="row inner-section platform-row">
+  
+    <div class="six columns flyLeft text-center">
+      <div class="flexslider">
+        <ul class="slides">
+          <li>
+           <%= image_tag "phone.png" %>
+          </li>
+          
+          <li>
+            <%= image_tag "phone.png" %>
+          </li>
+          
+          <li>
+            <%= image_tag "phone.png" %>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="six columns flyRight text-right">
+      <h2 class="text-right">Smartphone</h2>
+      <div class="hr"></div>
+      <p class="text-right">
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. 
+      </p>
+      <div class="green-btn">Jugar Ahora</div>
+      
+    </div>
+    
+  
+  </div>
+
+</section>
+
+<section id="newsletter">
+
+  <div class="row inner-section">
+    <div class="seven columns">
+      <i class="entypo newspaper">&nbsp;</i>
+      <div id="newsletter-text">
+        <h3 class="text-white">Dejanos tu email y quedate al tanto de las noticias de Galois!</h3> 
+      </div>
+    </div>
+  
+  
+    <div class="five columns">
+      <div class="details-error-wrap hide">Please enter a valid email address</div>
+      <input class="newsletter-email left" type="text" placeholder="Your Email Address" />
+      <input class="newsletter-btn left btn form-send" type="submit" value="Subscribe" />
+      <div class="hide green-btn newsletter-btn left btn form-sent">Subscribed</div>
+    </div>
+  
+  </div>
+  
+</section>
 
 
 
+<!-- <a id="pricing-scroll"></a>
+<section id="pricing" class="even-section">
 
+  <div class="row inner-section section-preamble text-center flyIn">
+    <h2>Awesome features that wont break the bank.</h2>
+    
+    <p>
+      Temporibus autem quibusdam et aut officiis recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat
+    </p>
+    <div class="hr"></div>
+  </div>
+  
+  <div class="row inner-section">
+  
+  
+    <div class="four columns price-table text-center fast-anim flyIn">
+      <div class="price-heading">
+        <h4 class="text-white">Standard</h4>
+      </div>
+      
+      <div class="price-amount">
+        <h2 class="text-white">$49 p/m</h2>
+      </div>
+      
+      <ul class="price-details">
+        <li>20 Logins</li>
+        <li>Secure Backup</li>
+        <li>Cloud Server</li>
+        <li>10 Beers</li>
+      </ul>
+      
+      <div class="price-purchase">
+        <a href="#"><div class="red-btn btn">Buy Now</div></a>
+      </div>
+    </div>
+    
+    <div class="four columns price-table text-center flyIn">
+      <div class="price-heading">
+        <h4 class="text-white">Professional</h4>
+      </div>
+      
+      <div class="price-amount">
+        <h2 class="text-white">$79 p/m</h2>
+      </div>
+      
+      <ul class="price-details">
+        <li>80 Logins</li>
+        <li>Offsite Backup</li>
+        <li>Cloud Server</li>
+        <li>100 Beers</li>
+      </ul>
+      
+      <div class="price-purchase">
+        <a href="#"><div class="red-btn btn">Buy Now</div></a>
+      </div>
+    </div>
+    
+    <div class="four columns price-table text-center slow-anim flyIn">
+      <div class="price-heading">
+        <h4 class="text-white">Enterprise</h4>
+      </div>
+      
+      <div class="price-amount">
+        <h2 class="text-white">$129 p/m</h2>
+      </div>
+      
+      <ul class="price-details">
+        <li>200 Logins</li>
+        <li>Offsite Backup</li>
+        <li>Cloud Server</li>
+        <li>1000 Beers</li>
+      </ul>
+      
+      <div class="price-purchase">
+        <a href="#"><div class="red-btn btn">Buy Now</div></a>
+      </div>
+    </div>
+    
+    
+  </div>
+
+</section> -->
+
+
+
+<section id="as-seen" class="even-section">
+
+  <div class="row inner-section section-preamble text-center flyIn">
+    <h2>Aliados Estrategicos</h2>
+    
+    <p>
+    </p>
+    <div class="hr"></div>
+  </div>
+  
+  <div class="row inner-section text-center">
+    <div class="medium-4 large-4 columns supporticons">
+      <a href="http://www.tarefa.co" target="_blank"> <%= image_tag "logo_mail.png" %>
+      </a>
+      
+      
+    </div>
+    
+    <div class="medium-4 large-4 columns supporticons">
+      <a href="http://www.worldtechmakers.co" target="_blank"> <%= image_tag "world.png" %>
+  </a>
+      
+    </div>
+    
+    <div class="medium-4 large-4 columns supporticons">
+     <a href="http://www.nativo.digital" target="_blank" ><%= image_tag "nativo_digital.png" %>
+      </a>
+    </div>
+    
+   
+  </div>
+  
+</section>
+
+</div>
